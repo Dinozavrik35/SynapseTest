@@ -1,6 +1,252 @@
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext,latin-ext&display=swap");
+@font-face {
+    font-family: 'font6cbd9deae466f760aa37d02e19309b71';
+        
+        src:    url('https://nomail.com.ua/files/eot/6cbd9deae466f760aa37d02e19309b71.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/6cbd9deae466f760aa37d02e19309b71.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/6cbd9deae466f760aa37d02e19309b71.woff2') format('woff2');
+    }
+    
+@font-face { font-family: 'OfficinaSerifC-Bold';  src: local('OfficinaSerifC-Bold'), url('https://nomail.com.ua/files/woff/6cbd9deae466f760aa37d02e19309b71.woff') format('woff'); }
+    
+
+$green: #006022;
 
 body {
-    color: blue;
-    font-size: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    overflow-y: scroll;
+}
+
+.sidebar {
+    background: url("../images/dest/sidebar_bg.jpg") #503314 no-repeat center top;
+    background-size: cover;
+    color: #FFF;
+    font-family:'OfficinaSerifC-Bold';
+    line-height: 1.25;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 260px;
+    height: 100vh;
+    padding: 25px 45px 230px;
+    position: fixed;
+
+    .sidebar__logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 95px;
+        transition: all 0.4s;
+
+        .sidebar__logo-pic {
+            margin-bottom: 22px;
+            transition: all 0.4s;
+        }
+        .sidebar__logo-text {
+            font-size: 15px;
+            line-height: 1.3;
+        }
+
+        &:hover {
+            color: rgba(255,255,255,0.65);
+
+            .sidebar__logo-pic {
+                transform: translateY(3px);
+            }
+        }
+    }
+
+    .sidebar__text {
+        line-height: 1.3;
+    }
+
+    .sidebar__nav {
+        padding: 0 10px 0 15px;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            .sidebar__nav-item {
+                margin-bottom: 27px;
+                border-bottom: solid 1px transparent;
+                transition: all 0.4s;
+                width: fit-content;
+                
+                &:hover {
+                    color: #FFF;
+                    border-color: rgba(255,255,255,0.85);
+                }
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 0;
+
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    .sidebar__footer {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        width: 100%;
+        padding: 0 55px 0 60px;
+        line-height: 1.15;
+    }
+
+    .sidebar__phone {
+        font-size: 20px;
+        margin-bottom: 7px;
+        border-bottom: solid 1px transparent;
+        transition: all 0.4s;
+
+        &:hover {
+            color: #FFF;
+            border-color: rgba(255,255,255,0.85);
+        }
+    }
+
+    .sidebar__time {
+        font-size: 12px;
+        margin-bottom: 20px;
+        font-family: "Roboto",sans-serif;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    .sidebar__callback {
+        border-bottom: solid 1px transparent;
+        transition: all 0.4s;
+
+        &:hover {
+            color: #FFF;
+            border-color: rgba(255,255,255,0.85);
+        }
+    }
+}
+
+.main__sidebar {
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    left: 260px;
+    padding: 30px 45px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.25;
+    color: #343434;
+
+    .main__sidebar-share {
+        margin-bottom: 75px;
+
+        .social-icons {
+            margin-top: 8px;
+
+            img {
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .main__sidebar-params {
+        margin-bottom: 35px;
+
+        .param-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            height: 50px;
+
+            .param-img {
+                display: flex;
+                justify-content: center;
+                margin-right: 25px;
+                width: 55px;
+            }
+
+            b {
+                font-weight: bold;
+            }
+            
+        }
+    }
+
+    .main__sidebar-price {
+        margin-bottom: 30px;
+        
+        b {
+            display: block;
+            color: $green;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    }
+
+    .main__sidebar-btn {
+        background: url("../images/dest/btn_bg.jpg") no-repeat center;
+        background-size: cover;
+        color: white;
+        font-family:'OfficinaSerifC-Bold';
+        font-weight: bold;
+        position: relative;
+        font-size: 22px;
+        line-height: 1.15;
+        padding: 19px 30px;
+        min-width: 255px;
+        box-shadow: 1px 2px 14px 0 rgba(0,0,0,0.3);
+        border: none;
+        overflow: hidden;
+        z-index: 1;
+        transition: all 0.4s;
+
+        .btn-text {
+            font-family:'OfficinaSerifC-Bold';
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 1.15;
+            position: relative;
+            z-index: 2;
+        }
+
+        &:hover {
+            box-shadow: 1px 2px 18px 3px rgb(0 0 0 / 40%);
+
+            &::before {
+                transform: scale(1.15) perspective(1px);
+            }
+
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: url("../images/dest/btn_bg.jpg") no-repeat center;
+            background-size: cover;
+            transition: transform 0.4s,opacity 0.4s;
+        }
+    }
+
+    .main__sidebar-desk {
+        margin-top: 60px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.5;
+    }
 }
