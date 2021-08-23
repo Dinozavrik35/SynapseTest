@@ -16,6 +16,14 @@
 
 $green: #006022;
 
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    text-align: center;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -25,6 +33,7 @@ body {
     color: #000;
     font-family: "Roboto", sans-serif;
     overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 a {
@@ -262,17 +271,249 @@ a {
 }
 
 .container {
+    padding: 25px 15px 0;
+    max-width: 1140px;
     margin-left: auto;
 
     .main__nav {
-
+        font-weight: 16px;
+        margin-bottom: 40px;
     }
 
     h1 {
-
+        font-family:'OfficinaSerifC-Bold';
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 1;
+        margin-bottom: 50px;
     }
 
 }
+
+.project__content {
+    display: flex;
+}
+
+.project__slider {
+    margin-right: 50px;
+
+    .project__slider-main {
+        margin-bottom: 20px;
+    }
+}
+
+.carousel {
+    background: #EEE;
+    
+    .carousel-cell {
+        width: fit-content;
+        height: auto;
+        margin-right: 25px;
+        background: #FFF;
+        counter-increment: gallery-cell;
+
+        &:before {
+            display: block;
+            text-align: center;
+            content: counter(gallery-cell);
+            color: white;
+        }
+    }
+}
+
+
+.project__floors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.floor-card {
+    display: flex;
+    flex-direction: column;
+
+    .floor-text {
+        font-size: 18px;
+        font-weight: 300;
+    }
+    
+    img {
+        margin-top: 15px;
+    }
+}
+
+.project__versions {
+    margin-top: 80px;
+}
+
+.project__version {
+    padding: 0 4px;
+
+    .version-header {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        font-family:'OfficinaSerifC-Bold';
+        margin-bottom: 40px;
+
+        img {
+            margin: 0 30px;
+        }
+    }
+
+    .version-inner {
+        font-weight: 300;
+        margin: 0 30px;
+        line-height: 2.6;
+    }
+
+    .version-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 35px 0;
+        font-size: 30px;
+        font-family:'OfficinaSerifC-Bold';
+        color: #FFF;
+    }
+
+    .version-img--first {
+        background: url("../images/dest/img-version_1.png") center no-repeat;
+    }
+
+    .version-img--second {
+        background: url("../images/dest/img-version_2.png") center no-repeat;
+    }
+}
+
+.section-header {
+    margin-bottom: 20px;
+    font-family:'OfficinaSerifC-Bold';
+    font-size: 30px;
+}
+
+.delivery {
+    @include center;
+    margin-top: 90px;
+    font-size: 18px;
+    font-weight: 300;
+
+    b {
+        font-weight: 700;
+    }
+
+    .delivery__upper-text {
+        width: 48%;
+    }
+
+    .delivery__images {
+        margin: 30px 0 40px;
+
+        img + img {
+            margin-left: 40px;
+        }
+    }
+}
+
+.description {
+    @include center;
+    text-align: left;
+    margin-top: 80px;
+    font-weight: 300;
+
+    .description__video {
+        margin-top: 50px;
+        position: relative;
+
+        .video-hand {
+            position: absolute;
+            top: 53.8%;
+            left: 40.69%;
+            background-color: #FFF;
+            border-radius: 50%;
+            padding: 12px 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+.houses {
+    text-align: center;
+    margin-top: 65px;
+    font-weight: 300;
+
+    .houses__cards {
+        text-align: left;
+        
+        img {
+            max-width: 100%;
+        }
+
+        .card-text {
+            margin-top: 20px;
+        }
+
+        .card-doc {
+            display: flex;
+            margin-top: 20px;
+
+            img {
+                box-shadow: 0 2px 5px 0 rgb(0 0 0 / 31%);
+                max-width: 100%;
+            }
+
+            .pdf-sign {
+                background: $green;
+                padding: 5px;
+                color: #FFF;
+                height: fit-content;
+                font-size: 10px;
+                font-weight: 700;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .houses__video {
+        background: url("../images/dest/house-video.jpg") center no-repeat;
+        color: #FFF;
+        font-weight: 300;
+        max-width: 540px;
+        height: 360px;
+        position: relative;
+        text-align: left;
+
+        img {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .video-text {
+            position: absolute;
+            padding: 0 25px;
+            bottom: 20px;
+        }
+    }
+
+    .houses__gallery {
+        margin-top: 60px;
+
+        .gallery-col {
+            padding: 0 7px;
+            margin-bottom: 14px;
+
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+        
+    }
+}
+
 
 .footer {
     font-weight: 300;
@@ -317,7 +558,7 @@ a {
             width: 26px;
             margin-right: 12px;
 
-            .img {
+            img {
                 max-width: 100%;
             }
         }

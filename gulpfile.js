@@ -21,6 +21,7 @@ function browsersync() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js', 
+        'node_modules/flickity/dist/flickity.pkgd.min.js',
         'app/js/app.js'
     ])
     .pipe(concat('app.min.js'))
@@ -30,7 +31,10 @@ function scripts() {
 }
 
 function styles() {
-    return src('app/scss/style.scss')
+    return src([
+        'node_modules/flickity/css/flickity.css',
+        'app/scss/style.scss'
+    ])
     .pipe(scss())
     .pipe(concat('app.min.css'))
     .pipe(autoprefixer({
