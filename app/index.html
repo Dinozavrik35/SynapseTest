@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/dest/short_icon.png">
     <link rel="stylesheet" href="css/app.min.css">
-    <title>Проект дома «На Озере» | СК «Вологодский плотник»</title>
+    <title>Проект дома «На озере» | СК «Вологодский плотник»</title>
 </head>
 <body>
     <div class="app">
@@ -109,32 +109,47 @@
             <div class="main__content">
                 <div class="container">
                     <nav class="main__nav">
-                        <a href="#">Главная</a>
-                        <a href="#">Проекты</a>
+                        <div class="main__nav-item"><a href="#">Главная</a></div>
+                        <div class="main__nav-item"><a href="#">Проекты</a></div>
                     </nav>
                     <section class="project">
-                        <h1>Проект дома «На Озере»</h1>
+                        <h1>Проект дома «На озере»</h1>
                         <div class="project__content">
                             <div class="project__slider">
                                 <div class="project__slider-main">
                                     <img src="images/dest/main_slider.jpg" alt="main_slider">
+                                    <div class="main-compare">
+                                        <img class="compare-1" src="images/dest/compare.png" alt="compare">
+                                        <img class="compare-2" src="images/dest/compare_white.png" alt="compare_white">
+                                    </div> 
                                 </div>
                                 <div class="project__slider-carousel">
-                                    <div class="carousel" data-flickity='{ "freeScroll": true, "pageDots": false }'>
-                                        <div class="carousel-cell">
-                                            <img src="images/dest/slider/slider1.jpg" alt="slider1">
+                                    <div class="carousel" data-flickity=
+                                    '{ "imagesLoaded": true, "pageDots": false, "percentPosition": false, "cellAlign": "left", "contain": true }'>
+                                        <div class="slide slide--active">
+                                            <a href="images/dest/slider/slider1.jpg">
+                                                <img src="images/dest/slider/slider1.jpg" alt="slider1">  
+                                            </a>
                                         </div>
-                                        <div class="carousel-cell">
-                                            <img src="images/dest/slider/slider2.jpg" alt="slider2">
+                                        <div class="slide">
+                                            <a href="images/dest/slider/slider2.jpg">
+                                                <img src="images/dest/slider/slider2.jpg" alt="slider2">  
+                                            </a>
                                         </div>
-                                        <div class="carousel-cell">
-                                            <img src="images/dest/slider/slider3.jpg" alt="slider3">
+                                        <div class="slide">
+                                            <a href="images/dest/slider/slider3.jpg">
+                                                <img src="images/dest/slider/slider3.jpg" alt="slider3">  
+                                            </a>
                                         </div>
-                                        <div class="carousel-cell">
-                                            <img src="images/dest/slider/slider4.jpg" alt="slider4">
+                                        <div class="slide">
+                                            <a href="images/dest/slider/slider4.jpg">
+                                                <img src="images/dest/slider/slider4.jpg" alt="slider4">  
+                                            </a>
                                         </div>
-                                        <div class="carousel-cell">
-                                            <img src="images/dest/slider/slider5.jpg" alt="slider5">
+                                        <div class="slide">
+                                            <a href="images/dest/slider/slider5.jpg">
+                                                <img src="images/dest/slider/slider5.jpg" alt="slider5">  
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -142,11 +157,19 @@
                             <div class="project__floors">
                                 <div class="floor-card">
                                     <div class="floor-text">1 этаж</div>
-                                    <img src="images/dest/first_floor.jpg" alt="first_floor">
+                                    <div class="floor-image">
+                                        <a href="images/dest/first_floor.jpg">
+                                            <img src="images/dest/first_floor.jpg" alt="first_floor">
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="floor-card">
                                     <div class="floor-text">2 этаж</div>
-                                    <img src="images/dest/second_floor.jpg" alt="second_floor">
+                                    <div class="floor-image">
+                                        <a href="images/dest/second_floor.jpg">
+                                            <img src="images/dest/second_floor.jpg" alt="second_floor">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -231,6 +254,9 @@
                         <div class="description__video">
                             <img src="images/dest/desc-video.jpg" alt="desk-video">
                             <img class="video-hand" src="images/dest/video-hand.png" alt="video-hand">
+                            <iframe class="description__video-play" 
+                            src="https://www.youtube.com/embed/6duHxyr04Kg?autoplay=1">
+                            </iframe>
                         </div>
                     </section>
                     <section class="houses">
@@ -274,33 +300,52 @@
                                     <div class="video-text">
                                         Вологодская область, село Устье-Кубенское
                                     </div>
+                                    <iframe class="houses__video-play" 
+                                    src="https://www.youtube.com/embed/6duHxyr04Kg?autoplay=1">
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
                         <div class="houses__gallery row">
                             <div class="col-lg-3 gallery-col">
-                                <img src="images/dest/gallery/gallery-1.jpg" alt="gallery-1">
+                                <a href="images/dest/gallery/gallery-1.jpg">
+                                    <img src="images/dest/gallery/gallery-1.jpg" alt="gallery-1">
+                                </a>
                             </div>
                             <div class="col-lg-3 gallery-col">
-                                <img src="images/dest/gallery/gallery-2.jpg" alt="gallery-2">
+                                <a href="images/dest/gallery/gallery-2.jpg">
+                                    <img src="images/dest/gallery/gallery-2.jpg" alt="gallery-2">
+                                </a>
                             </div>
                             <div class="col-lg-3 gallery-col">
-                                <img src="images/dest/gallery/gallery-3.jpg" alt="gallery-3">
+                                <a href="images/dest/gallery/gallery-3.jpg">
+                                    <img src="images/dest/gallery/gallery-3.jpg" alt="gallery-3">
+                                </a>
                             </div>
                             <div class="col-lg-3 gallery-col">
-                                <img src="images/dest/gallery/gallery-4.jpg" alt="gallery-4">
+                                <a href="images/dest/gallery/gallery-4.jpg">
+                                    <img src="images/dest/gallery/gallery-4.jpg" alt="gallery-4">
+                                </a>
                             </div>
                             <div class="col-lg-3 gallery-col">
-                                <img src="images/dest/gallery/gallery-5.jpg" alt="gallery-5">
+                                <a href="images/dest/gallery/gallery-5.jpg">
+                                    <img src="images/dest/gallery/gallery-5.jpg" alt="gallery-5">
+                                </a>
                             </div>
                             <div class="col-lg-3 gallery-col">
-                                <img src="images/dest/gallery/gallery-6.jpg" alt="gallery-6">
+                                <a href="images/dest/gallery/gallery-6.jpg">
+                                    <img src="images/dest/gallery/gallery-6.jpg" alt="gallery-6">
+                                </a>
                             </div>
                             <div class="col-lg-3 gallery-col">
-                                <img src="images/dest/gallery/gallery-7.jpg" alt="gallery-7">
+                                <a href="images/dest/gallery/gallery-7.jpg">
+                                    <img src="images/dest/gallery/gallery-7.jpg" alt="gallery-7">
+                                </a>
                             </div>
                             <div class="col-lg-3 gallery-col">
-                                <img src="images/dest/gallery/gallery-8.jpg" alt="gallery-8">
+                                <a href="images/dest/gallery/gallery-8.jpg">
+                                    <img src="images/dest/gallery/gallery-8.jpg" alt="gallery-8">
+                                </a>
                             </div>
                         </div>
                     </section>

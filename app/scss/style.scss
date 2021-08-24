@@ -32,7 +32,7 @@ body {
     line-height: 1.5;
     color: #000;
     font-family: "Roboto", sans-serif;
-    overflow-y: scroll;
+    overflow-x: hidden;
     box-sizing: border-box;
 }
 
@@ -271,13 +271,25 @@ a {
 }
 
 .container {
-    padding: 25px 15px 0;
+    padding: 25px 25px 0;
     max-width: 1140px;
-    margin-left: auto;
+    margin: 0;
 
     .main__nav {
         font-weight: 16px;
         margin-bottom: 40px;
+        display: flex;
+
+        a {
+            padding-bottom: 5px;
+        }
+
+        .main__nav-item + .main__nav-item {
+            &::before {
+                content: url("../images/dest/small_arrow.png");
+                margin: 0 8px;
+            }
+        }
     }
 
     h1 {
@@ -286,6 +298,7 @@ a {
         font-size: 60px;
         line-height: 1;
         margin-bottom: 50px;
+        color: #503314;
     }
 
 }
@@ -299,25 +312,66 @@ a {
 
     .project__slider-main {
         margin-bottom: 20px;
+        position: relative;
+
+        .main-compare {
+            @include center;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #FFF;
+            width: 36px;
+            height: 36px;
+            transition: background-color 0.4s;
+
+            .compare-2 {
+                display: none;
+            }
+
+            &:hover {
+                background-color: $green;
+
+                .compare-1 {
+                    display: none;
+                }
+
+                .compare-2 {
+                    display: block;
+                }
+            }
+        }
     }
 }
 
 .carousel {
-    background: #EEE;
-    
-    .carousel-cell {
-        width: fit-content;
-        height: auto;
-        margin-right: 25px;
-        background: #FFF;
-        counter-increment: gallery-cell;
 
-        &:before {
-            display: block;
-            text-align: center;
-            content: counter(gallery-cell);
-            color: white;
+    background: #EEE;
+
+    .carousel {
+        background: #EEE;
+    }
+
+    .slide {
+        display: block;
+        cursor: pointer;
+        margin-right: 27px;
+        border-bottom: solid 1px transparent;
+
+        img {
+            height: 112px;
+            transition: all 0.4s;
+
+            &:hover {
+                opacity: 85%;
+                transform: scale(1.015) perspective(1px);
+            }
         }
+    }
+
+    .slide--active {
+        padding-bottom: 5px;
+        border-bottom: solid 1px $green;
     }
 }
 
@@ -337,9 +391,32 @@ a {
         font-weight: 300;
     }
     
+    .floor-image {
+        @include center;
+    }
+
+    a {
+        border: none;
+
+        &:hover {
+            border: none;
+        }
+    }
+
     img {
         margin-top: 15px;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover {
+            opacity: 85%;
+            transform: scale(1.015) perspective(1px);
+        }
     }
+}
+
+.floor-card + .floor-card {
+    margin-top: 35px;
 }
 
 .project__versions {
@@ -424,16 +501,50 @@ a {
     .description__video {
         margin-top: 50px;
         position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            z-index: 3;
+            transition: background-color 0.4s;
+        }
+
+        &:hover::after {
+            background-color: rgba(90, 60, 30, 0.25);
+        }
 
         .video-hand {
             position: absolute;
-            top: 53.8%;
+            top: 52.6%;
             left: 40.69%;
             background-color: #FFF;
             border-radius: 50%;
             padding: 12px 16px;
             cursor: pointer;
+            z-index: 5;
+            transition: all 0.4s;
         }
+
+        &:hover {
+            .video-hand {
+                transform: scale(1.1) perspective(1px);
+            }
+        }
+    }
+
+    .description__video-play {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
     }
 }
 
@@ -482,19 +593,55 @@ a {
         height: 360px;
         position: relative;
         text-align: left;
+        cursor: pointer;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            z-index: 3;
+            transition: background-color 0.4s;
+        }
+
+        &:hover::after {
+            background-color: rgba(90, 60, 30, 0.25);
+        }
 
         img {
             position: relative;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            z-index: 5;
+            transition: all 0.4s;
+        }
+
+        &:hover {
+            img {
+                transform: translate(-50%, -50%) scale(1.05) perspective(1px);
+            }
         }
 
         .video-text {
             position: absolute;
             padding: 0 25px;
             bottom: 20px;
+            z-index: 5;
         }
+    }
+
+    .houses__video-play {
+        width: 100%;
+        height: 360px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
     }
 
     .houses__gallery {
@@ -504,10 +651,19 @@ a {
             padding: 0 7px;
             margin-bottom: 14px;
 
+            a {
+                border: none;
+        
+                &:hover {
+                    border: none;
+                }
+            }
+
             img {
                 width: 100%;
                 height: 200px;
                 object-fit: cover;
+                cursor: pointer;
             }
         }
         
@@ -518,6 +674,8 @@ a {
 .footer {
     font-weight: 300;
     margin-top: 100px;
+    padding: 0 20px 20px;
+    font-size: 15px;
 
     h6 {
         font-weight: 700;
@@ -539,6 +697,10 @@ a {
             display: block;
             margin-bottom: 14px;
         }
+    }
+
+    .footer__project {
+        padding-left: 20px;
     }
 
     .footer__addresses, .footer__socials {
@@ -604,7 +766,7 @@ a {
 
 .footer__bottom {
     color: #494949;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 40px;
 
     .footer__synapse {
