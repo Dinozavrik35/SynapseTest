@@ -313,6 +313,8 @@ a {
     .project__slider-main {
         margin-bottom: 20px;
         position: relative;
+        width: 780px;
+        height: 500px;
 
         .main-compare {
             @include center;
@@ -344,25 +346,34 @@ a {
     }
 }
 
-.carousel {
-
+.slider-carousel {
     background: #EEE;
+    padding: 0 30px;
 
-    .carousel {
-        background: #EEE;
+    a {
+        border: none;
+        pointer-events: none;
+
+        &:hover {
+            border: none;
+        }
     }
 
     .slide {
         display: block;
         cursor: pointer;
         margin-right: 27px;
+        padding-bottom: 5px;
+        transition: border 0.4s;
         border-bottom: solid 1px transparent;
 
         img {
             height: 112px;
             transition: all 0.4s;
+        }
 
-            &:hover {
+        &:hover {
+            img {
                 opacity: 85%;
                 transform: scale(1.015) perspective(1px);
             }
@@ -370,11 +381,75 @@ a {
     }
 
     .slide--active {
-        padding-bottom: 5px;
+        transition: border 0.4s;
         border-bottom: solid 1px $green;
+    }
+
+    .flickity-prev-next-button .flickity-button-icon {
+        top: 22%;
+        width: 50%;
+        height: 50%;
+        transition: all 0.4s;
+    }
+
+    .flickity-prev-next-button.previous {
+        .flickity-button-icon {
+            left: 0;
+        }
+    }
+
+    .flickity-prev-next-button.next {
+        .flickity-button-icon {
+            right: 0;
+            left: auto;
+        }
+    }
+
+    .flickity-prev-next-button.previous {
+        left: 0;
+
+        &:hover {
+            .flickity-button-icon {
+               left: 20%;
+            }
+        }
+    }
+
+    .flickity-prev-next-button.next {
+        right: 0;
+
+        &:hover {
+            .flickity-button-icon {
+                right: 20%;
+             }
+        }
     }
 }
 
+.flickity-prev-next-button {
+    width: 30px;
+    height: 100%;
+    border-radius: 0;
+    background: white;
+    padding: 0;
+}
+
+.flickity-prev-next-button .arrow {
+    fill: $green;
+    transition: all 0.4s;
+}
+
+.flickity-prev-next-button:hover {
+    background: #FFF;
+}
+
+.flickity-prev-next-button:disabled {
+    opacity: 1;
+
+    .arrow {
+        fill: #F44336;
+    }
+}
 
 .project__floors {
     display: flex;
@@ -393,10 +468,20 @@ a {
     
     .floor-image {
         @include center;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover {
+            img {
+                opacity: 85%;
+                transform: scale(1.015) perspective(1px);
+            }
+        }
     }
 
     a {
         border: none;
+        pointer-events: none;
 
         &:hover {
             border: none;
@@ -407,16 +492,131 @@ a {
         margin-top: 15px;
         cursor: pointer;
         transition: all 0.4s;
-
-        &:hover {
-            opacity: 85%;
-            transform: scale(1.015) perspective(1px);
-        }
     }
 }
 
 .floor-card + .floor-card {
     margin-top: 35px;
+}
+
+.big-floors, .big-houses {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+    opacity: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.project__floors-slider, .houses-slider {
+    max-width: 950px;
+    height: 1140px;
+    padding: 14px;
+    padding-bottom: 13px;
+    position: relative;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFF;
+
+    .floors-carousel, .houses-carousel {
+        padding-bottom: 40px;
+        max-width: 90vh;
+    }
+
+    img {
+        max-width: 950px;
+        height: auto;
+    }
+
+    .slide-desc {
+        color: $green;
+        font-size: 16px;
+    }
+
+    .close {
+        @include center;
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        background-color: $green;
+        width: 39px;
+        height: 39px;
+        z-index: 10;
+        cursor: pointer;
+        transition: all 0.4s;
+        border: none;
+
+        &:hover {
+            background-color: #009334;
+        }
+    }
+
+    .slide-num {
+        color: $green;
+        font-size: 14px;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .flickity-prev-next-button {
+        width: 45%;
+        height: 15px;
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
+        top: auto;
+        bottom: 0;
+    }
+
+    .flickity-prev-next-button .flickity-button-icon {
+        bottom: 0;
+        width: 15px;
+        height: 15px;
+        transition: all 0.4s;
+    }
+
+    .flickity-prev-next-button.previous {
+        .flickity-button-icon {
+            right: 0;
+            left: auto;
+        }
+    }
+
+    .flickity-prev-next-button.next {
+        .flickity-button-icon {
+            left: 0;
+            right: auto;
+        }
+    }
+
+    .flickity-prev-next-button.previous {
+        left: 0;
+
+        &:hover {
+            .flickity-button-icon {
+               right: 3px;
+            }
+        }
+    }
+
+    .flickity-prev-next-button.next {
+        right: 0;
+
+        &:hover {
+            .flickity-button-icon {
+                left: 3px;
+             }
+        }
+    }
 }
 
 .project__versions {
@@ -545,6 +745,8 @@ a {
         top: 0;
         left: 0;
         display: none;
+        transition: all 0.4s;
+        z-index: 10;
     }
 }
 
@@ -555,7 +757,16 @@ a {
 
     .houses__cards {
         text-align: left;
-        
+
+        a {
+            border: none;
+            display: block;
+
+            &:hover {
+                border: none;
+            }
+        }
+
         img {
             max-width: 100%;
         }
@@ -642,6 +853,8 @@ a {
         top: 0;
         left: 0;
         display: none;
+        transition: all 0.4s;
+        z-index: 10;
     }
 
     .houses__gallery {
@@ -650,9 +863,11 @@ a {
         .gallery-col {
             padding: 0 7px;
             margin-bottom: 14px;
+            cursor: pointer;
 
             a {
                 border: none;
+                pointer-events: none;
         
                 &:hover {
                     border: none;
@@ -666,16 +881,29 @@ a {
                 cursor: pointer;
             }
         }
-        
     }
 }
 
+.houses-slider {
+    width: 950px;
+    height: 680px;
+}
+
+.houses-slide {
+    overflow-y: hidden;
+    img {
+        width: 922px;
+        height: 612px;
+        object-fit: cover;
+    }
+}
 
 .footer {
     font-weight: 300;
     margin-top: 100px;
     padding: 0 20px 20px;
     font-size: 15px;
+    max-width: 1235px;
 
     h6 {
         font-weight: 700;

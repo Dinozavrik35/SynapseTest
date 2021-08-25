@@ -117,37 +117,36 @@
                         <div class="project__content">
                             <div class="project__slider">
                                 <div class="project__slider-main">
-                                    <img src="images/dest/main_slider.jpg" alt="main_slider">
+                                    <img class="main-img" src="images/dest/slider/big-slider1.jpg" alt="main_slider">
                                     <div class="main-compare">
                                         <img class="compare-1" src="images/dest/compare.png" alt="compare">
                                         <img class="compare-2" src="images/dest/compare_white.png" alt="compare_white">
                                     </div> 
                                 </div>
                                 <div class="project__slider-carousel">
-                                    <div class="carousel" data-flickity=
-                                    '{ "imagesLoaded": true, "pageDots": false, "percentPosition": false, "cellAlign": "left", "contain": true }'>
+                                    <div class="slider-carousel">
                                         <div class="slide slide--active">
-                                            <a href="images/dest/slider/slider1.jpg">
+                                            <a href="images/dest/slider/big-slider1.jpg">
                                                 <img src="images/dest/slider/slider1.jpg" alt="slider1">  
                                             </a>
                                         </div>
                                         <div class="slide">
-                                            <a href="images/dest/slider/slider2.jpg">
+                                            <a href="images/dest/slider/big-slider2.jpg">
                                                 <img src="images/dest/slider/slider2.jpg" alt="slider2">  
                                             </a>
                                         </div>
                                         <div class="slide">
-                                            <a href="images/dest/slider/slider3.jpg">
+                                            <a href="images/dest/slider/big-slider3.jpg">
                                                 <img src="images/dest/slider/slider3.jpg" alt="slider3">  
                                             </a>
                                         </div>
                                         <div class="slide">
-                                            <a href="images/dest/slider/slider4.jpg">
+                                            <a href="images/dest/slider/big-slider4.jpg">
                                                 <img src="images/dest/slider/slider4.jpg" alt="slider4">  
                                             </a>
                                         </div>
                                         <div class="slide">
-                                            <a href="images/dest/slider/slider5.jpg">
+                                            <a href="images/dest/slider/big-slider5.jpg">
                                                 <img src="images/dest/slider/slider5.jpg" alt="slider5">  
                                             </a>
                                         </div>
@@ -155,7 +154,7 @@
                                 </div>
                             </div>
                             <div class="project__floors">
-                                <div class="floor-card">
+                                <div class="floor-card" onclick="showFloors(0)">
                                     <div class="floor-text">1 этаж</div>
                                     <div class="floor-image">
                                         <a href="images/dest/first_floor.jpg">
@@ -163,13 +162,38 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="floor-card">
+                                <div class="floor-card" onclick="showFloors(1)">
                                     <div class="floor-text">2 этаж</div>
                                     <div class="floor-image">
                                         <a href="images/dest/second_floor.jpg">
                                             <img src="images/dest/second_floor.jpg" alt="second_floor">
                                         </a>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="big-floors">
+                            <div class="project__floors-slider">
+                                <div class="slide-desc">
+                                    1 этаж
+                                </div>
+                                <div class="close" onclick="hideFloors()">
+                                    <img src="images/dest/close.png" alt="close">
+                                </div>
+                                <div class="floors-carousel">
+                                    <div class="floor-slide">
+                                        <img src="images/dest/big-first_floor.jpg" alt="big-first_floor">
+                                    </div>
+                                    <div class="floor-slide">
+                                        <img src="images/dest/big-second_floor.jpg" alt="big-second_floor">
+                                    </div>
+                                </div>
+                                <div class="slide-num">
+                                    1/2
+                                </div>
+                                <div class="side">
+                                
                                 </div>
                             </div>
                         </div>
@@ -268,28 +292,32 @@
                                 <div class="houses__cards row">
                                     <div class="col-lg-6">
                                         <div class="houses__card">
-                                            <img src="images/dest/house_1.jpg" alt="house_1">
-                                            <div class="card-text">
-                                                Вологодская область<br>
-                                                д. Капустино
-                                            </div>
-                                            <div class="card-doc">
-                                                <img src="images/dest/pdf_1.jpg" alt="pdf_1">
-                                                <div class="pdf-sign">PDF</div>
-                                            </div>
+                                            <a href="#">
+                                                <img src="images/dest/house_1.jpg" alt="house_1">
+                                                <div class="card-text">
+                                                    Вологодская область<br>
+                                                    д. Капустино
+                                                </div>
+                                                <div class="card-doc">
+                                                    <img src="images/dest/pdf_1.jpg" alt="pdf_1">
+                                                    <div class="pdf-sign">PDF</div>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="houses__card">
-                                            <img src="images/dest/house_2.jpg" alt="house_2">
-                                            <div class="card-text">
-                                                Вологодская область<br>
-                                                д. Капустино
-                                            </div>
-                                            <div class="card-doc">
-                                                <img src="images/dest/pdf_2.jpg" alt="pdf_2">
-                                                <div class="pdf-sign">PDF</div>
-                                            </div>
+                                            <a href="#">
+                                                <img src="images/dest/house_2.jpg" alt="house_2">
+                                                <div class="card-text">
+                                                    Вологодская область<br>
+                                                    д. Капустино
+                                                </div>
+                                                <div class="card-doc">
+                                                    <img src="images/dest/pdf_2.jpg" alt="pdf_2">
+                                                    <div class="pdf-sign">PDF</div>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -307,48 +335,87 @@
                             </div>
                         </div>
                         <div class="houses__gallery row">
-                            <div class="col-lg-3 gallery-col">
+                            <div class="col-lg-3 gallery-col" onclick="showHouses(0)">
                                 <a href="images/dest/gallery/gallery-1.jpg">
                                     <img src="images/dest/gallery/gallery-1.jpg" alt="gallery-1">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col">
+                            <div class="col-lg-3 gallery-col" onclick="showHouses(1)">
                                 <a href="images/dest/gallery/gallery-2.jpg">
                                     <img src="images/dest/gallery/gallery-2.jpg" alt="gallery-2">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col">
+                            <div class="col-lg-3 gallery-col" onclick="showHouses(2)">
                                 <a href="images/dest/gallery/gallery-3.jpg">
                                     <img src="images/dest/gallery/gallery-3.jpg" alt="gallery-3">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col">
+                            <div class="col-lg-3 gallery-col" onclick="showHouses(3)">
                                 <a href="images/dest/gallery/gallery-4.jpg">
                                     <img src="images/dest/gallery/gallery-4.jpg" alt="gallery-4">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col">
+                            <div class="col-lg-3 gallery-col" onclick="showHouses(4)">
                                 <a href="images/dest/gallery/gallery-5.jpg">
                                     <img src="images/dest/gallery/gallery-5.jpg" alt="gallery-5">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col">
+                            <div class="col-lg-3 gallery-col" onclick="showHouses(5)"> 
                                 <a href="images/dest/gallery/gallery-6.jpg">
                                     <img src="images/dest/gallery/gallery-6.jpg" alt="gallery-6">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col">
+                            <div class="col-lg-3 gallery-col" onclick="showHouses(6)">
                                 <a href="images/dest/gallery/gallery-7.jpg">
                                     <img src="images/dest/gallery/gallery-7.jpg" alt="gallery-7">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col">
+                            <div class="col-lg-3 gallery-col" onclick="showHouses(7)">
                                 <a href="images/dest/gallery/gallery-8.jpg">
                                     <img src="images/dest/gallery/gallery-8.jpg" alt="gallery-8">
                                 </a>
                             </div>
                         </div>
                     </section>
+                    <div class="big-houses">
+                        <div class="houses-slider">
+                            <div class="close" onclick="hideHouses()">
+                                <img src="images/dest/close.png" alt="close">
+                            </div>
+                            <div class="houses-carousel">
+                                <div class="houses-slide">
+                                    <img src="images/dest/gallery/gallery-1.jpg" alt="gallery-1">
+                                </div>
+                                <div class="houses-slide">
+                                    <img src="images/dest/gallery/gallery-2.jpg" alt="gallery-2">
+                                </div>
+                                <div class="houses-slide">
+                                    <img src="images/dest/gallery/gallery-3.jpg" alt="gallery-3">
+                                </div>
+                                <div class="houses-slide">
+                                    <img src="images/dest/gallery/gallery-4.jpg" alt="gallery-4">
+                                </div>
+                                <div class="houses-slide">
+                                    <img src="images/dest/gallery/gallery-5.jpg" alt="gallery-5">
+                                </div>
+                                <div class="houses-slide">
+                                    <img src="images/dest/gallery/gallery-6.jpg" alt="gallery-6">
+                                </div>
+                                <div class="houses-slide">
+                                    <img src="images/dest/gallery/gallery-7.jpg" alt="gallery-7">
+                                </div>
+                                <div class="houses-slide">
+                                    <img src="images/dest/gallery/gallery-8.jpg" alt="gallery-8">
+                                </div>
+                            </div>
+                            <div class="slide-num">
+                                1/8
+                            </div>
+                            <div class="side">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <footer class="footer">
                     <div class="footer__inner row">
