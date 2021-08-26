@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="images/dest/short_icon.png">
     <link rel="stylesheet" href="css/app.min.css">
     <title>Проект дома «На озере» | СК «Вологодский плотник»</title>
@@ -21,6 +21,10 @@
                    поколениями
                 </div>
             </a>
+            <div class="sidebar__nav-logo">
+                <img src="images/src/burger.png" alt="burger-menu">
+                <span>меню</span>
+            </div>
             <nav class="sidebar__nav">
                 <ul>
                     <li class="sidebar__nav-item"><a href="#">О компании</a></li>
@@ -44,68 +48,6 @@
             </div>
         </aside>
         <main class="main">
-            <aside class="main__sidebar">
-                <div class="main__sidebar-share">
-                    Поделиться проектом
-                    <div class="social-icons">
-                        <a href="#"><img src="images/dest/vk.png" alt="vk"></a>
-                        <a href="#"><img src="images/dest/ok.png" alt="ok"></a>
-                        <a href="#"><img src="images/dest/fb.png" alt="facebook"></a>
-                    </div>
-                </div>
-                <div class="main__sidebar-params">
-                    <div class="param-item">
-                        <div class="param-img">
-                            <img src="images/dest/size.png" alt="size">
-                        </div>
-                        <div>
-                            Размеры:<br>
-                            <b>12,0 м x 9,5 м</b>
-                        </div>
-                    </div>
-                    <div class="param-item">
-                        <div class="param-img">
-                            <img src="images/dest/square.png" alt="square">
-                        </div>
-                        <div>
-                            Общая площадь:<br>
-                            <b>153 м<sup>2</sup></b>
-                        </div>
-                    </div>
-                    <div class="param-item">
-                        <div class="param-img">
-                            <img src="images/dest/floors.png" alt="floors">
-                        </div>
-                        <div>
-                            Этажность:<br>
-                            <b>2 этажа</b>
-                        </div>
-                    </div>
-                    <div class="param-item">
-                        <div class="param-img">
-                            <img src="images/dest/log.png" alt="log">
-                        </div>
-                        <div>
-                            Диаметр бревна:<br>
-                            <b>153 м<sup>2</sup></b>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__sidebar-price">
-                    Цена за домокомплект:
-                    <b>1 200 000 руб.</b>
-                </div>
-                <button class="main__sidebar-btn">
-                    <div class="btn-text">Заказать смету</div>
-                </button>
-                <div class="main__sidebar-desk">
-                    Проект "На озере" - чудесное решение 
-                    для южных широт нашей страны. Большие 
-                    площади остекления откроют чудесные виды 
-                    на живописные пляжи, а террасы создадут 
-                    непередаваемую атмосферу для ужинов и завтраков.
-                </div>
-            </aside>
             <div class="main__content">
                 <div class="container">
                     <nav class="main__nav">
@@ -114,63 +56,129 @@
                     </nav>
                     <section class="project">
                         <h1>Проект дома «На озере»</h1>
-                        <div class="project__content">
-                            <div class="project__slider">
-                                <div class="project__slider-main">
-                                    <img class="main-img" src="images/dest/slider/big-slider1.jpg" alt="main_slider">
-                                    <div class="main-compare">
-                                        <img class="compare-1" src="images/dest/compare.png" alt="compare">
-                                        <img class="compare-2" src="images/dest/compare_white.png" alt="compare_white">
-                                    </div> 
+                        <div class="project__upper">
+                            <div class="project__content">
+                                <div class="project__slider">
+                                    <div class="project__slider-main">
+                                        <img class="main-img" src="images/dest/slider/big-slider1.jpg" alt="main_slider">
+                                        <div class="main-compare">
+                                            <img class="compare-1" src="images/dest/compare.png" alt="compare">
+                                            <img class="compare-2" src="images/dest/compare_white.png" alt="compare_white">
+                                        </div> 
+                                    </div>
+                                    <div class="project__slider-carousel">
+                                        <div class="slider-carousel">
+                                            <div class="slide slide--active">
+                                                <a href="images/dest/slider/big-slider1.jpg">
+                                                    <img src="images/dest/slider/slider1.jpg" alt="slider1">  
+                                                </a>
+                                            </div>
+                                            <div class="slide">
+                                                <a href="images/dest/slider/big-slider2.jpg">
+                                                    <img src="images/dest/slider/slider2.jpg" alt="slider2">  
+                                                </a>
+                                            </div>
+                                            <div class="slide">
+                                                <a href="images/dest/slider/big-slider3.jpg">
+                                                    <img src="images/dest/slider/slider3.jpg" alt="slider3">  
+                                                </a>
+                                            </div>
+                                            <div class="slide">
+                                                <a href="images/dest/slider/big-slider4.jpg">
+                                                    <img src="images/dest/slider/slider4.jpg" alt="slider4">  
+                                                </a>
+                                            </div>
+                                            <div class="slide">
+                                                <a href="images/dest/slider/big-slider5.jpg">
+                                                    <img src="images/dest/slider/slider5.jpg" alt="slider5">  
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="project__slider-carousel">
-                                    <div class="slider-carousel">
-                                        <div class="slide slide--active">
-                                            <a href="images/dest/slider/big-slider1.jpg">
-                                                <img src="images/dest/slider/slider1.jpg" alt="slider1">  
+
+                                <div class="project__floors">
+                                    <div class="floor-card" onclick="showFloors(0)">
+                                        <div class="floor-text">1 этаж</div>
+                                        <div class="floor-image">
+                                            <a href="images/dest/first_floor.jpg">
+                                                <img src="images/dest/first_floor.jpg" alt="first_floor">
                                             </a>
                                         </div>
-                                        <div class="slide">
-                                            <a href="images/dest/slider/big-slider2.jpg">
-                                                <img src="images/dest/slider/slider2.jpg" alt="slider2">  
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="images/dest/slider/big-slider3.jpg">
-                                                <img src="images/dest/slider/slider3.jpg" alt="slider3">  
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="images/dest/slider/big-slider4.jpg">
-                                                <img src="images/dest/slider/slider4.jpg" alt="slider4">  
-                                            </a>
-                                        </div>
-                                        <div class="slide">
-                                            <a href="images/dest/slider/big-slider5.jpg">
-                                                <img src="images/dest/slider/slider5.jpg" alt="slider5">  
+                                    </div>
+                                    <div class="floor-card" onclick="showFloors(1)">
+                                        <div class="floor-text">2 этаж</div>
+                                        <div class="floor-image">
+                                            <a href="images/dest/second_floor.jpg">
+                                                <img src="images/dest/second_floor.jpg" alt="second_floor">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="project__floors">
-                                <div class="floor-card" onclick="showFloors(0)">
-                                    <div class="floor-text">1 этаж</div>
-                                    <div class="floor-image">
-                                        <a href="images/dest/first_floor.jpg">
-                                            <img src="images/dest/first_floor.jpg" alt="first_floor">
-                                        </a>
+
+                            <aside class="main__sidebar">
+                                <div class="main__sidebar-share">
+                                    Поделиться проектом
+                                    <div class="social-icons">
+                                        <a href="#"><img src="images/dest/vk.png" alt="vk"></a>
+                                        <a href="#"><img src="images/dest/ok.png" alt="ok"></a>
+                                        <a href="#"><img src="images/dest/fb.png" alt="facebook"></a>
                                     </div>
                                 </div>
-                                <div class="floor-card" onclick="showFloors(1)">
-                                    <div class="floor-text">2 этаж</div>
-                                    <div class="floor-image">
-                                        <a href="images/dest/second_floor.jpg">
-                                            <img src="images/dest/second_floor.jpg" alt="second_floor">
-                                        </a>
+                                <div class="main__sidebar-params">
+                                    <div class="param-item">
+                                        <div class="param-img">
+                                            <img src="images/dest/size.png" alt="size">
+                                        </div>
+                                        <div>
+                                            Размеры:<br>
+                                            <b>12,0 м x 9,5 м</b>
+                                        </div>
+                                    </div>
+                                    <div class="param-item">
+                                        <div class="param-img">
+                                            <img src="images/dest/square.png" alt="square">
+                                        </div>
+                                        <div>
+                                            Общая площадь:<br>
+                                            <b>153 м<sup>2</sup></b>
+                                        </div>
+                                    </div>
+                                    <div class="param-item">
+                                        <div class="param-img">
+                                            <img src="images/dest/floors.png" alt="floors">
+                                        </div>
+                                        <div>
+                                            Этажность:<br>
+                                            <b>2 этажа</b>
+                                        </div>
+                                    </div>
+                                    <div class="param-item">
+                                        <div class="param-img">
+                                            <img src="images/dest/log.png" alt="log">
+                                        </div>
+                                        <div>
+                                            Диаметр бревна:<br>
+                                            <b>153 м<sup>2</sup></b>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="main__sidebar-price">
+                                    Цена за домокомплект:
+                                    <b>1 200 000 руб.</b>
+                                </div>
+                                <button class="main__sidebar-btn">
+                                    <div class="btn-text">Заказать смету</div>
+                                </button>
+                                <div class="main__sidebar-desk">
+                                    Проект "На озере" - чудесное решение 
+                                    для южных широт нашей страны. Большие 
+                                    площади остекления откроют чудесные виды 
+                                    на живописные пляжи, а террасы создадут 
+                                    непередаваемую атмосферу для ужинов и завтраков.
+                                </div>
+                            </aside>
                         </div>
 
                         <div class="big-floors">
@@ -192,17 +200,16 @@
                                 <div class="slide-num">
                                     1/2
                                 </div>
-                                <div class="side">
-                                
-                                </div>
                             </div>
                         </div>
 
                         <div class="project__versions row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="project__version">
                                     <div class="version-header">
-                                        <div><img src="images/dest/version_1.png" alt="version_1"></div>
+                                        <div class="version-header-img">
+                                            <img src="images/dest/version_1.png" alt="version_1">
+                                        </div>
                                         Комплектация "Базовая" (домокомплект)
                                     </div>
                                     <div class="version-inner">
@@ -222,10 +229,12 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="project__version">
                                     <div class="version-header">
-                                        <div><img src="images/dest/version_2.png" alt="version_2"></div>
+                                        <div class="version-header-img">
+                                            <img src="images/dest/version_2.png" alt="version_2">
+                                        </div>
                                         Комплектация "Оптимальная" (домокомплект + монтаж)
                                     </div>
                                     <div class="version-inner">
@@ -288,9 +297,9 @@
                             По данному проекту были построены дома
                         </h3>
                         <div class="houses__inner row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="houses__cards row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 col-md-6">
                                         <div class="houses__card">
                                             <a href="#">
                                                 <img src="images/dest/house_1.jpg" alt="house_1">
@@ -305,7 +314,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 col-md-6">
                                         <div class="houses__card">
                                             <a href="#">
                                                 <img src="images/dest/house_2.jpg" alt="house_2">
@@ -322,7 +331,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-12">
                                 <div class="houses__video">
                                     <img src="images/dest/video-icon.png" alt="video-icon">
                                     <div class="video-text">
@@ -335,42 +344,42 @@
                             </div>
                         </div>
                         <div class="houses__gallery row">
-                            <div class="col-lg-3 gallery-col" onclick="showHouses(0)">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gallery-col" onclick="showHouses(0)">
                                 <a href="images/dest/gallery/gallery-1.jpg">
                                     <img src="images/dest/gallery/gallery-1.jpg" alt="gallery-1">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col" onclick="showHouses(1)">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gallery-col" onclick="showHouses(1)">
                                 <a href="images/dest/gallery/gallery-2.jpg">
                                     <img src="images/dest/gallery/gallery-2.jpg" alt="gallery-2">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col" onclick="showHouses(2)">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gallery-col" onclick="showHouses(2)">
                                 <a href="images/dest/gallery/gallery-3.jpg">
                                     <img src="images/dest/gallery/gallery-3.jpg" alt="gallery-3">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col" onclick="showHouses(3)">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gallery-col" onclick="showHouses(3)">
                                 <a href="images/dest/gallery/gallery-4.jpg">
                                     <img src="images/dest/gallery/gallery-4.jpg" alt="gallery-4">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col" onclick="showHouses(4)">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gallery-col" onclick="showHouses(4)">
                                 <a href="images/dest/gallery/gallery-5.jpg">
                                     <img src="images/dest/gallery/gallery-5.jpg" alt="gallery-5">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col" onclick="showHouses(5)"> 
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gallery-col" onclick="showHouses(5)"> 
                                 <a href="images/dest/gallery/gallery-6.jpg">
                                     <img src="images/dest/gallery/gallery-6.jpg" alt="gallery-6">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col" onclick="showHouses(6)">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gallery-col" onclick="showHouses(6)">
                                 <a href="images/dest/gallery/gallery-7.jpg">
                                     <img src="images/dest/gallery/gallery-7.jpg" alt="gallery-7">
                                 </a>
                             </div>
-                            <div class="col-lg-3 gallery-col" onclick="showHouses(7)">
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-6 gallery-col" onclick="showHouses(7)">
                                 <a href="images/dest/gallery/gallery-8.jpg">
                                     <img src="images/dest/gallery/gallery-8.jpg" alt="gallery-8">
                                 </a>
@@ -419,7 +428,7 @@
                 </div>
                 <footer class="footer">
                     <div class="footer__inner row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-sm-12">
                             <div class="footer__links">
                                 <div class="footer__production">
                                     <h6 class="footer__title">
@@ -441,7 +450,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-sm-12">
                             <div class="footer__contacts">
                                 <div class="footer__addresses">
                                     <div class="footer__icon">
@@ -491,11 +500,11 @@
                         </div>
                     </div>
                     <div class="footer__bottom row">
-                        <div class="footer__copyright col-lg-6">
+                        <div class="footer__copyright col-lg-6 col-md-6 col-sm-12">
                             © СК "Вологодский плотник" © 2010 — 2017<br>
                             Все права защищены.
                         </div>
-                        <div class="footer__synapse col-lg-6">
+                        <div class="footer__synapse col-lg-6 col-md-6 col-sm-12">
                             <img src="images/dest/synapse.svg" alt="Синапс">
                             — <a href="https://www.synapse-studio.ru/usluga/web?utm_source=client">Создание сайта</a>
                         </div>
