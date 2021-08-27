@@ -1,3 +1,5 @@
+
+
 let $carousel = $(".slider-carousel").flickity({
     cellSelector: "div.slide",
     initialIndex: 0,
@@ -85,7 +87,7 @@ function showHouses(index) {
     });
     setTimeout(function () {
         $houses.flickity("select", index);
-    }, 200)
+    }, 200);
 }
 
 function hideHouses() {
@@ -94,7 +96,7 @@ function hideHouses() {
     $(".big-houses").animate({"opacity": 0, duration: 6000});
     setTimeout(function () {
         $(".big-houses").css({display: "none"});
-    }, 500)
+    }, 500);
 }
 
 $(".description__video").on("click", function() {
@@ -104,3 +106,50 @@ $(".description__video").on("click", function() {
 $(".houses__video").on("click", function() {
     $(".houses__video-play").css({display: "block"});
 })
+
+function showMenu() {
+    $(".sidebar").addClass("sidebar--active");
+    $(".sidebar__nav-logo").animate({opacity: 0});
+    $(".sidebar__close").animate({opacity: 1});
+    $(".sidebar__nav").animate({opacity: 1});
+    $(".sidebar__footer").animate({opacity: 1});
+}
+
+function hideMenu() {
+    $(".sidebar").removeClass("sidebar--active");
+    $(".sidebar__close").animate({opacity: 0});
+    $(".sidebar__nav-logo").animate({opacity: 1});
+    $(".sidebar__nav").animate({opacity: 0});
+    $(".sidebar__footer").animate({opacity: 0});
+}
+
+function smallMenu() {
+
+    if ($(".small-menu").hasClass("active")) {
+        $(".small-menu").removeClass("active");
+        $(".menu-bar--first").css({transform: "rotate(0)"});
+        $(".menu-bar--second").css({width: "36px", opacity: 1});
+        $(".menu-bar--third").css({transform: "rotate(0)"});
+    } else {
+        $(".small-menu").addClass("active");
+        $(".menu-bar--first").css({transform: "rotate(45deg) translate3d(10px, 7px, 0px)"});
+        $(".menu-bar--second").css({width: 0, opacity: 0});
+        $(".menu-bar--third").css({transform: "rotate(-45deg) translate3d(10px, -7px, 0px)"});
+    }
+}
+
+function hideSmallMenu() {
+    $(".menu-bar--first").css({transform: "rotate(45deg) translate3d(10px, 7px, 0px)"});
+    $(".menu-bar--second").css({width: 0, opacity: 0});
+    $(".menu-bar--third").css({transform: "rotate(-45deg) translate3d(10px, -7px, 0px)"});
+}
+
+$(window).resize(function(){
+    if($(window).width() >= 1024 || $(window).width() <= 768){
+        $(".sidebar").removeClass("sidebar--active");
+        $(".sidebar__nav-logo").animate({opacity: 1});
+        $(".sidebar__close").animate({opacity: 1});
+        $(".sidebar__nav").animate({opacity: 1});
+        $(".sidebar__footer").animate({opacity: 1});
+    }
+});

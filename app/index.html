@@ -11,6 +11,9 @@
 <body>
     <div class="app">
         <aside class="sidebar">
+            <div class="sidebar__close" onclick="hideMenu()">
+                <img src="images/dest/close.png" alt="close">
+            </div>
             <a href="#" class="sidebar__logo">
                 <div class="sidebar__logo-pic">
                     <img src="images/dest/logo.svg" alt="logo">
@@ -21,7 +24,7 @@
                    поколениями
                 </div>
             </a>
-            <div class="sidebar__nav-logo">
+            <div class="sidebar__nav-logo" onclick="showMenu()">
                 <img src="images/src/burger.png" alt="burger-menu">
                 <span>меню</span>
             </div>
@@ -47,6 +50,31 @@
                 </div>
             </div>
         </aside>
+
+        <section class="small-menu">
+                <div class="small-menu__header">
+                    <div class="small-menu__logo">
+                        <img src="images/dest/logo.svg" alt="logo">
+                    </div>
+                    <button data-bs-toggle="collapse" data-bs-target="#hiddenMenu" aria-expanded="false" onclick="smallMenu()">
+                        <div class="menu-bar menu-bar--first"></div>
+                        <div class="menu-bar menu-bar--second"></div>
+                        <div class="menu-bar menu-bar--third"></div>
+                    </button>
+                </div>
+                <div class="collapse" id="hiddenMenu">
+                    <ul>
+                        <li class="small-menu__item"><a href="#">О компании</a></li>
+                        <li class="small-menu__item"><a href="#">Проекты</a></li>
+                        <li class="small-menu__item"><a href="#">Наши работы</a></li>
+                        <li class="small-menu__item"><a href="#">Отзывы</a></li>
+                        <li class="small-menu__item"><a href="#">Новости</a></li>
+                        <li class="small-menu__item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <main class="main">
             <div class="main__content">
                 <div class="container">
@@ -434,19 +462,35 @@
                                     <h6 class="footer__title">
                                         Производство
                                     </h6>
-                                    <a href="#">Рубленное бревно<br></a>
-                                    <a href="#">Оцилиндрованное бревно<br></a>
-                                    <a href="#">Дома из бруса<br></a>
-                                    <a href="#">Дома из оцилиндрованного бревна<br></a>
-                                    <a href="#">Дома из клееного бруса<br></a>
+                                    <div class="production-item">
+                                        <a href="#">Рубленное бревно<br></a>
+                                    </div>
+                                    <div class="production-item">
+                                        <a href="#">Оцилиндрованное бревно<br></a>
+                                    </div>
+                                    <div class="production-item">
+                                        <a href="#">Дома из бруса<br></a>
+                                    </div>
+                                    <div class="production-item">
+                                        <a href="#">Дома из оцилиндрованного бревна<br></a>
+                                    </div>
+                                    <div class="production-item">
+                                        <a href="#">Дома из клееного бруса<br></a>
+                                    </div>
                                 </div>
                                 <div class="footer__project">
                                     <h6 class="footer__title">
                                         Проект
                                     </h6>
-                                    <a href="#">Дома<br></a>
-                                    <a href="#">Бани<br></a>
-                                    <a href="#">Малые формы<br></a>
+                                    <div class="production-item">
+                                        <a href="#">Дома<br></a>
+                                    </div>
+                                    <div class="production-item">
+                                        <a href="#">Бани<br></a>
+                                    </div>
+                                    <div class="production-item">
+                                        <a href="#">Малые формы<br></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
