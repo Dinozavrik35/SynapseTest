@@ -15,7 +15,12 @@
 @import "brands.scss";
 
 $green: #006022;
+$orange: #F44336;
 $white: #FFF;
+$black: #000;
+$darkgrey: #1c1c1c;
+$lightgrey: #494949;
+$brown: #503314;
 
 @mixin center {
     display: flex;
@@ -31,10 +36,11 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    color: #000;
+    color: $black;
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
     box-sizing: border-box;
+    margin-right: calc(-1 * (100vw - 100%));
 }
 
 a {
@@ -57,16 +63,16 @@ img {
 }
 
 .sidebar {
-    background: url("../images/dest/sidebar_bg.jpg") #503314 no-repeat center top;
+    background: url("../images/dest/background/sidebar_bg.jpg") $brown no-repeat center top;
     background-size: cover;
     color: $white;
     font-family:'OfficinaSerifC-Bold';
     line-height: 1.25;
     text-transform: uppercase;
     font-weight: bold;
-    width: 260px;
+    width: 280px;
     height: 100vh;
-    padding: 25px 45px 230px;
+    padding: 25px 55px 230px;
     position: fixed;
     z-index: 30;
     transition: all 0.4s;
@@ -310,7 +316,7 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    background: url("../images/dest/sidebar_bg.jpg") center top no-repeat;
+    background: url("../images/dest/background/sidebar_bg.jpg") center top no-repeat;
     background-size: cover;
     z-index: 100;
     display: none;
@@ -361,7 +367,6 @@ img {
         } 
     }
 
-
     ul {
         padding: 0;
         padding-top: 10px;
@@ -386,7 +391,7 @@ img {
 }
 
 .main__content {
-    margin-left: 660px;
+    margin-left: 680px;
 
     @media (max-width: 1400px) {
         margin-left: 230px;
@@ -402,10 +407,10 @@ img {
     }
 
     a {
-        color: #1c1c1c;
+        color: $darkgrey;
 
         &:hover {
-            border-color: #1c1c1c;
+            border-color: $darkgrey;
         }
     }
 }
@@ -426,8 +431,9 @@ img {
 
     .main__nav {
         font-weight: 300;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         display: flex;
+        color: $darkgrey;
 
         @media (max-width: 1400px) {
             margin-bottom: 20px;
@@ -439,8 +445,10 @@ img {
 
         .main__nav-item + .main__nav-item {
             &::before {
-                content: url("../images/dest/small_arrow.png");
-                margin: 0 8px;
+                content: "";
+                background:  url("../images/dest/icons/small_arrow.png") center no-repeat;
+                padding: 0px 8px 1px;
+                margin: 0px 8px;
             }
         }
     }
@@ -450,8 +458,8 @@ img {
         font-weight: bold;
         font-size: 60px;
         line-height: 1;
-        margin-bottom: 50px;
-        color: #503314;
+        margin-bottom: 40px;
+        color: $brown;
 
         @media (max-width: 1400px) {
             margin-bottom: 35px;
@@ -459,6 +467,10 @@ img {
 
         @media (max-width: 768px) {
             font-size: 50px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 30px;
         }
     }
 
@@ -468,7 +480,7 @@ img {
     width: 400px;
     height: 100vh;
     position: fixed;
-    left: 260px;
+    left: 280px;
     top: 0;
     padding: 30px 45px;
     font-size: 18px;
@@ -497,10 +509,27 @@ img {
         }
 
         .social-icons {
-            margin-top: 8px;
+            margin-top: 12px;
+
+            a {
+                border: none;
+
+                &:hover {
+                    border: none;
+                }
+            }
 
             img {
                 margin-right: 6px;
+            }
+
+            .social-count {
+                display: inline-block;
+
+                img {
+                    padding-top: 3px;
+                    margin: 0;
+                }
             }
         }
     }
@@ -542,7 +571,7 @@ img {
     }
 
     .main__sidebar-btn {
-        background: url("../images/dest/btn_bg.jpg") no-repeat center;
+        background: url("../images/dest/background/btn_bg.jpg") no-repeat center;
         background-size: cover;
         position: relative;
         padding: 19px 30px;
@@ -581,7 +610,7 @@ img {
             width: 100%;
             height: 100%;
             z-index: 1;
-            background: url("../images/dest/btn_bg.jpg") no-repeat center;
+            background: url("../images/dest/background/btn_bg.jpg") no-repeat center;
             background-size: cover;
             transition: transform 0.4s,opacity 0.4s;
         }
@@ -791,7 +820,7 @@ img {
     opacity: 1;
 
     .arrow {
-        fill: #F44336;
+        fill: $orange;
     }
 }
 
@@ -809,6 +838,7 @@ img {
 .floor-card {
     display: flex;
     flex-direction: column;
+    color: #343434;
 
     @media (max-width: 1400px) {
         width: 50%;
@@ -878,8 +908,8 @@ img {
 }
 
 .project__floors-slider, .houses-slider {
-    max-width: 950px;
-    height: 1108px;
+    width: 50%;
+    height: auto;
     padding: 14px;
     padding-bottom: 13px;
     position: relative;
@@ -887,11 +917,6 @@ img {
     left: 50%;
     transform: translateX(-50%);
     background: $white;
-
-    @media (max-width: 1400px) {
-        width: 50%;
-        height: auto;
-    }
 
     @media (max-width: 1000px) {
         width: 70%;
@@ -907,14 +932,13 @@ img {
         padding-bottom: 40px;
     }
 
-    .floor-slide {
+    .floor-slide, .houses-slide {
         width: 100%;
-        max-width: 100%;
-    }
 
-    img {
-        max-width: 100%;
-        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     .slide-desc {
@@ -1002,11 +1026,12 @@ img {
 }
 
 .project__versions {
-    margin-top: 80px;
+    margin-top: 70px;
 }
 
 .project__version {
     padding: 0 4px;
+    color: #343434;
 
     @media (max-width: 768px) {
         margin-bottom: 40px;
@@ -1017,7 +1042,7 @@ img {
         align-items: center;
         font-size: 22px;
         font-family:'OfficinaSerifC-Bold';
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         @media (max-width: 768px) {
             margin-bottom: 25px;
@@ -1039,7 +1064,7 @@ img {
     .version-inner {
         font-weight: 300;
         margin: 0 30px;
-        line-height: 2.6;
+        line-height: 2.4;
     }
 
     .version-img {
@@ -1053,25 +1078,27 @@ img {
     }
 
     .version-img--first {
-        background: url("../images/dest/img-version_1.png") center no-repeat;
+        background: url("../images/dest/versions/img-version_1.png") center no-repeat;
     }
 
     .version-img--second {
-        background: url("../images/dest/img-version_2.png") center no-repeat;
+        background: url("../images/dest/versions/img-version_2.png") center no-repeat;
     }
 }
 
 .section-header {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-family:'OfficinaSerifC-Bold';
     font-size: 30px;
+    color: $black;
 }
 
 .delivery {
     @include center;
-    margin-top: 90px;
+    margin-top: 95px;
     font-size: 18px;
     font-weight: 300;
+    color: $darkgrey;
 
     b {
         font-weight: 700;
@@ -1100,6 +1127,7 @@ img {
     text-align: left;
     margin-top: 80px;
     font-weight: 300;
+    color: $darkgrey;
 
     .description__video {
         margin-top: 50px;
@@ -1227,7 +1255,7 @@ img {
     }
 
     .houses__video {
-        background: url("../images/dest/house-video.jpg") center no-repeat;
+        background: url("../images/dest/houses/house-video.jpg") center no-repeat;
         color: $white;
         font-weight: 300;
         max-width: 540px;
@@ -1319,40 +1347,13 @@ img {
     }
 }
 
-.houses-slider {
-    width: 950px;
-    height: 680px;
-
-    @media (max-width: 1400px) {
-        width: 800px;
-        height: 584px;
-    }
-
-    @media (max-width: 1000px) {
-        width: 90%;
-        height: auto;
-    }
-
-    .houses-carousel {
-        width: 100%;
-    }
-}
-
-.houses-slide {
-    width: 100%;
-    img {
-        width: 100%;
-        height: auto;
-        max-height: 612px;
-    }
-}
-
 .footer {
     font-weight: 300;
     margin-top: 100px;
     padding: 0 20px 20px;
     font-size: 15px;
     max-width: 1235px;
+    color: $lightgrey;
 
     @media (max-width: 1000px) {
         margin-top: 70px;
@@ -1360,6 +1361,7 @@ img {
 
     h6 {
         font-weight: 700;
+        color: #282828;
     }
 
     .footer__links, .footer__contacts {
@@ -1464,7 +1466,7 @@ img {
                     padding-top: 30px;
 
                     &:hover {
-                        color: #1c1c1c;
+                        color: $darkgrey;
                     }
                 }
             }
@@ -1481,9 +1483,13 @@ img {
 }
 
 .footer__bottom {
-    color: #494949;
+    color: $lightgrey;
     font-size: 12px;
     margin-top: 40px;
+
+    @media (min-width: 1600px) {
+        margin-right: 5px;
+    }
 
     .footer__copyright {
         @media (max-width: 576px) {
@@ -1507,7 +1513,7 @@ img {
         }
 
         a {
-            border-bottom: 1px solid #494949;
+            border-bottom: 1px solid $lightgrey;
 
             &:hover {
                 border-color: transparent;
